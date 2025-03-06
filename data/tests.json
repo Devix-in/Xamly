@@ -1,0 +1,517 @@
+{
+  "test_series": [
+    {
+      "id": "test_201",
+      "title": "Mathematics Quiz",
+      "description": "Solve SSC & Railway level math problems!",
+      "time_limit": "15 min",
+      "questions_count": 10,
+      "questions": [
+        {
+          "id": "q1",
+          "question": "What is the square root of 144?",
+          "options": ["10", "12", "14", "16"],
+          "answer": "12"
+        },
+        {
+          "id": "q2",
+          "question": "If a train travels 120 km in 3 hours, what is its speed?",
+          "options": ["30 km/h", "40 km/h", "50 km/h", "60 km/h"],
+          "answer": "40 km/h"
+        },
+        {
+          "id": "q3",
+          "question": "The LCM of 12 and 18 is:",
+          "options": ["24", "36", "48", "18"],
+          "answer": "36"
+        },
+        {
+          "id": "q4",
+          "question": "What is 75% of 240?",
+          "options": ["150", "160", "180", "200"],
+          "answer": "180"
+        },
+        {
+          "id": "q5",
+          "question": "A man bought a cycle for ₹5000 and sold it for ₹4500. Find the loss percentage.",
+          "options": ["8%", "9%", "10%", "12%"],
+          "answer": "10%"
+        },
+        {
+          "id": "q6",
+          "question": "What is the value of (3^2 + 4^2)?",
+          "options": ["7", "14", "25", "5"],
+          "answer": "25"
+        },
+        {
+          "id": "q7",
+          "question": "The sum of the angles in a triangle is:",
+          "options": ["90°", "120°", "180°", "360°"],
+          "answer": "180°"
+        },
+        {
+          "id": "q8",
+          "question": "Find the simple interest on ₹2000 at 5% per annum for 2 years.",
+          "options": ["₹100", "₹150", "₹200", "₹250"],
+          "answer": "₹200"
+        },
+        {
+          "id": "q9",
+          "question": "A man walks 4 km north, then 3 km east. How far is he from the starting point?",
+          "options": ["3 km", "4 km", "5 km", "7 km"],
+          "answer": "5 km"
+        },
+        {
+          "id": "q10",
+          "question": "The area of a rectangle with length 12m and width 5m is:",
+          "options": ["50 sq. m", "60 sq. m", "70 sq. m", "80 sq. m"],
+          "answer": "60 sq. m"
+        }
+      ]
+    },
+    {
+      "id": "test_202",
+      "title": "Reasoning Quiz",
+      "description": "Test your logical reasoning skills!",
+      "time_limit": "15 min",
+      "questions_count": 10,
+      "questions": [
+        {
+          "id": "q1",
+          "question": "If in a certain code, 'MANGO' is written as 'NZMHP', how is 'APPLE' written?",
+          "options": ["BOOMF", "BQOMF", "BPPMF", "BQPNF"],
+          "answer": "BPPMF"
+        },
+        {
+          "id": "q2",
+          "question": "If 4+3 = 25, 6+2 = 36, then 5+4 = ?",
+          "options": ["35", "40", "45", "50"],
+          "answer": "45"
+        },
+        {
+          "id": "q3",
+          "question": "A is the brother of B. B is the daughter of C. How is A related to C?",
+          "options": ["Son", "Father", "Uncle", "Cousin"],
+          "answer": "Son"
+        },
+        {
+          "id": "q4",
+          "question": "Find the missing number: 2, 6, 12, 20, ?",
+          "options": ["28", "30", "32", "36"],
+          "answer": "30"
+        },
+        {
+          "id": "q5",
+          "question": "Which one does not belong to the group?",
+          "options": ["Apple", "Banana", "Grapes", "Potato"],
+          "answer": "Potato"
+        },
+        {
+          "id": "q6",
+          "question": "Which word is the odd one out?",
+          "options": ["Knife", "Blade", "Scissor", "Rope"],
+          "answer": "Rope"
+        },
+        {
+          "id": "q7",
+          "question": "If CLOCK is coded as DNQEM, then WATCH is coded as?",
+          "options": ["YBVEI", "XBUDI", "YBVFI", "ZCWGJ"],
+          "answer": "YBVFI"
+        },
+        {
+          "id": "q8",
+          "question": "If in a certain language, 'FLOWER' is written as 'EKVNDS', then how is 'GARDEN' written?",
+          "options": ["FZQCEM", "HCSEFO", "FBQCDM", "HZTDEN"],
+          "answer": "FZQCEM"
+        },
+        {
+          "id": "q9",
+          "question": "Choose the odd number: 121, 144, 169, 196, 225",
+          "options": ["121", "144", "169", "196"],
+          "answer": "196"
+        },
+        {
+          "id": "q10",
+          "question": "A is 6 years older than B. After 4 years, A will be twice B's age. What is B’s current age?",
+          "options": ["2 years", "4 years", "6 years", "8 years"],
+          "answer": "2 years"
+        }
+      ]
+    },
+    {
+      "id": "test_204",
+      "title": "General Science Quiz",
+      "description": "Physics, Chemistry, and Biology questions for SSC & Railway exams!",
+      "time_limit": "15 min",
+      "questions_count": 10,
+      "questions": [
+        {
+          "id": "q1",
+          "question": "What is the chemical symbol for Sodium?",
+          "options": ["Na", "S", "So", "Sd"],
+          "answer": "Na"
+        },
+        {
+          "id": "q2",
+          "question": "Which vitamin is known as the ‘sunshine vitamin’?",
+          "options": ["Vitamin A", "Vitamin B", "Vitamin C", "Vitamin D"],
+          "answer": "Vitamin D"
+        },
+        {
+          "id": "q3",
+          "question": "What is the SI unit of force?",
+          "options": ["Joule", "Newton", "Pascal", "Watt"],
+          "answer": "Newton"
+        },
+        {
+          "id": "q4",
+          "question": "Which gas is most abundant in Earth's atmosphere?",
+          "options": ["Oxygen", "Carbon Dioxide", "Nitrogen", "Argon"],
+          "answer": "Nitrogen"
+        },
+        {
+          "id": "q5",
+          "question": "Which acid is found in lemon?",
+          "options": ["Sulfuric acid", "Hydrochloric acid", "Citric acid", "Acetic acid"],
+          "answer": "Citric acid"
+        },
+        {
+          "id": "q6",
+          "question": "What is the boiling point of water in Celsius?",
+          "options": ["90°C", "100°C", "110°C", "120°C"],
+          "answer": "100°C"
+        },
+        {
+          "id": "q7",
+          "question": "Which metal is liquid at room temperature?",
+          "options": ["Gold", "Mercury", "Silver", "Copper"],
+          "answer": "Mercury"
+        },
+        {
+          "id": "q8",
+          "question": "Which blood group is known as the universal donor?",
+          "options": ["A", "B", "AB", "O"],
+          "answer": "O"
+        },
+        {
+          "id": "q9",
+          "question": "Which part of the plant conducts photosynthesis?",
+          "options": ["Root", "Stem", "Leaf", "Flower"],
+          "answer": "Leaf"
+        },
+        {
+          "id": "q10",
+          "question": "What is the powerhouse of the cell?",
+          "options": ["Nucleus", "Mitochondria", "Ribosome", "Golgi body"],
+          "answer": "Mitochondria"
+        }
+      ]
+    },
+    {
+      "id": "test_205",
+      "title": "History Quiz",
+      "description": "Important historical events and figures!",
+      "time_limit": "15 min",
+      "questions_count": 10,
+      "questions": [
+        {
+          "id": "q1",
+          "question": "Who was the founder of the Maurya Empire?",
+          "options": ["Ashoka", "Chandragupta Maurya", "Harsha", "Bimbisara"],
+          "answer": "Chandragupta Maurya"
+        },
+        {
+          "id": "q2",
+          "question": "Who wrote Arthashastra?",
+          "options": ["Kalidasa", "Chanakya", "Vishnu Gupta", "Aryabhata"],
+          "answer": "Chanakya"
+        },
+        {
+          "id": "q3",
+          "question": "Who was the first Mughal Emperor?",
+          "options": ["Akbar", "Babur", "Humayun", "Shah Jahan"],
+          "answer": "Babur"
+        },
+        {
+          "id": "q4",
+          "question": "When did India gain independence?",
+          "options": ["1942", "1945", "1947", "1950"],
+          "answer": "1947"
+        },
+        {
+          "id": "q5",
+          "question": "Who is known as the Father of the Indian Constitution?",
+          "options": ["Mahatma Gandhi", "B. R. Ambedkar", "Sardar Patel", "Jawaharlal Nehru"],
+          "answer": "B. R. Ambedkar"
+        },
+        {
+          "id": "q6",
+          "question": "Who led the 1857 Revolt in Kanpur?",
+          "options": ["Mangal Pandey", "Nana Saheb", "Rani Lakshmibai", "Tatya Tope"],
+          "answer": "Nana Saheb"
+        },
+        {
+          "id": "q7",
+          "question": "Which Indian king defeated Alexander the Great’s general, Seleucus?",
+          "options": ["Chandragupta Maurya", "Ashoka", "Harsha", "Kanishka"],
+          "answer": "Chandragupta Maurya"
+        },
+        {
+          "id": "q8",
+          "question": "Which movement was launched by Mahatma Gandhi in 1942?",
+          "options": ["Non-Cooperation Movement", "Civil Disobedience Movement", "Quit India Movement", "Swadeshi Movement"],
+          "answer": "Quit India Movement"
+        },
+        {
+          "id": "q9",
+          "question": "Who was the last Viceroy of British India?",
+          "options": ["Lord Canning", "Lord Mountbatten", "Lord Curzon", "Lord Dalhousie"],
+          "answer": "Lord Mountbatten"
+        },
+        {
+          "id": "q10",
+          "question": "Which battle marked the beginning of British rule in India?",
+          "options": ["Battle of Plassey", "Battle of Buxar", "First Anglo-Maratha War", "Second Anglo-Mysore War"],
+          "answer": "Battle of Plassey"
+        }
+      ]
+    },
+    {
+      "id": "test_206",
+      "title": "Polity Quiz",
+      "description": "Indian Constitution and political system-related questions!",
+      "time_limit": "15 min",
+      "questions_count": 10,
+      "questions": [
+        {
+          "id": "q1",
+          "question": "Which part of the Indian Constitution deals with Fundamental Rights?",
+          "options": ["Part I", "Part II", "Part III", "Part IV"],
+          "answer": "Part III"
+        },
+        {
+          "id": "q2",
+          "question": "How many schedules are there in the Indian Constitution?",
+          "options": ["10", "12", "15", "20"],
+          "answer": "12"
+        },
+        {
+          "id": "q3",
+          "question": "Which article of the Indian Constitution abolishes untouchability?",
+          "options": ["Article 14", "Article 15", "Article 17", "Article 19"],
+          "answer": "Article 17"
+        },
+        {
+          "id": "q4",
+          "question": "Who appoints the Chief Election Commissioner of India?",
+          "options": ["President", "Prime Minister", "Parliament", "Supreme Court"],
+          "answer": "President"
+        },
+        {
+          "id": "q5",
+          "question": "Which amendment is known as the ‘Mini Constitution’?",
+          "options": ["42nd", "44th", "73rd", "86th"],
+          "answer": "42nd"
+        },
+        {
+          "id": "q6",
+          "question": "Who is the head of the Rajya Sabha?",
+          "options": ["President", "Vice President", "Prime Minister", "Lok Sabha Speaker"],
+          "answer": "Vice President"
+        },
+        {
+          "id": "q7",
+          "question": "Which article provides special status to Jammu & Kashmir (before abrogation)?",
+          "options": ["Article 356", "Article 360", "Article 370", "Article 372"],
+          "answer": "Article 370"
+        },
+        {
+          "id": "q8",
+          "question": "Which committee recommended the Panchayati Raj system?",
+          "options": ["Ashok Mehta Committee", "Balwant Rai Mehta Committee", "Kothari Commission", "Mandal Commission"],
+          "answer": "Balwant Rai Mehta Committee"
+        },
+        {
+          "id": "q9",
+          "question": "How many members are nominated by the President to the Rajya Sabha?",
+          "options": ["10", "12", "15", "20"],
+          "answer": "12"
+        },
+        {
+          "id": "q10",
+          "question": "Which writ is issued to release a person from illegal detention?",
+          "options": ["Mandamus", "Habeas Corpus", "Certiorari", "Quo Warranto"],
+          "answer": "Habeas Corpus"
+        }
+      ]
+    },
+    {
+      "id": "test_207",
+      "title": "Geography Quiz",
+      "description": "Physical and Indian geography questions!",
+      "time_limit": "15 min",
+      "questions_count": 10,
+      "questions": [
+        {
+          "id": "q1",
+          "question": "Which is the largest continent in the world?",
+          "options": ["Africa", "Asia", "Europe", "North America"],
+          "answer": "Asia"
+        },
+        {
+          "id": "q2",
+          "question": "Which is the longest river in the world?",
+          "options": ["Amazon", "Nile", "Yangtze", "Mississippi"],
+          "answer": "Nile"
+        },
+        {
+          "id": "q3",
+          "question": "Which mountain range separates Europe and Asia?",
+          "options": ["Andes", "Rockies", "Ural", "Himalayas"],
+          "answer": "Ural"
+        },
+        {
+          "id": "q4",
+          "question": "Which Indian state has the longest coastline?",
+          "options": ["Tamil Nadu", "Maharashtra", "Gujarat", "Kerala"],
+          "answer": "Gujarat"
+        },
+        {
+          "id": "q5",
+          "question": "Which desert is the largest in India?",
+          "options": ["Thar", "Rann of Kutch", "Deccan", "Ladakh"],
+          "answer": "Thar"
+        },
+        {
+          "id": "q6",
+          "question": "Which is the highest peak in India?",
+          "options": ["Kanchenjunga", "Nanda Devi", "Everest", "Anamudi"],
+          "answer": "Kanchenjunga"
+        },
+        {
+          "id": "q7",
+          "question": "What is the capital of Uttarakhand?",
+          "options": ["Dehradun", "Nainital", "Mussoorie", "Haridwar"],
+          "answer": "Dehradun"
+        },
+        {
+          "id": "q8",
+          "question": "Which ocean is the largest in the world?",
+          "options": ["Atlantic", "Indian", "Pacific", "Arctic"],
+          "answer": "Pacific"
+        },
+        {
+          "id": "q9",
+          "question": "Which Indian river is known as the ‘Sorrow of Bihar’?",
+          "options": ["Ganga", "Brahmaputra", "Kosi", "Yamuna"],
+          "answer": "Kosi"
+        },
+        {
+          "id": "q10",
+          "question": "Which state is known as the ‘Land of Five Rivers’?",
+          "options": ["Rajasthan", "Punjab", "Haryana", "Gujarat"],
+          "answer": "Punjab"
+        }
+      ]
+    },
+    {
+      "id": "test_301",
+      "title": "शास्त्रीय नृत्य क्विज़",
+      "description": "भारत के 8 शास्त्रीय नृत्यों पर आधारित कठिन प्रश्न!",
+      "time_limit": "10 min",
+      "questions_count": 15,
+      "questions": [
+        {
+          "id": "q1",
+          "question": "भारत में कुल कितने शास्त्रीय नृत्य मान्यता प्राप्त हैं?",
+          "options": ["6", "7", "8", "9"],
+          "answer": "8"
+        },
+        {
+          "id": "q2",
+          "question": "‘अभिनय दर्पण’ के लेखक कौन हैं?",
+          "options": ["भरतमुनि", "नंदिकेश्वर", "तुलसीदास", "कालिदास"],
+          "answer": "नंदिकेश्वर"
+        },
+        {
+          "id": "q3",
+          "question": "निम्नलिखित में से कौन सा शास्त्रीय नृत्य असम से संबंधित है?",
+          "options": ["कथकली", "सत्रिया", "मोहिनीअट्टम", "भरतनाट्यम"],
+          "answer": "सत्रिया"
+        },
+        {
+          "id": "q4",
+          "question": "भरतनाट्यम नृत्य की शुरुआत किस चरण से होती है?",
+          "options": ["तिलाना", "अलारिप्पू", "जुगलबंदी", "वर्णम"],
+          "answer": "अलारिप्पू"
+        },
+        {
+          "id": "q5",
+          "question": "ओडिसी नृत्य मुख्यतः किस मुद्रा पर आधारित है?",
+          "options": ["समभंग", "अभंग", "त्रिभंग", "द्विभंग"],
+          "answer": "त्रिभंग"
+        },
+        {
+          "id": "q6",
+          "question": "कुचिपुड़ी नृत्य में किस प्रकार के संगीत का प्रयोग होता है?",
+          "options": ["हिंदुस्तानी", "कर्नाटिक", "लोक संगीत", "गजल"],
+          "answer": "कर्नाटिक"
+        },
+        {
+          "id": "q7",
+          "question": "मणिपुरी नृत्य किस संप्रदाय से संबंधित है?",
+          "options": ["शैव", "वैष्णव", "बौद्ध", "जैन"],
+          "answer": "वैष्णव"
+        },
+        {
+          "id": "q8",
+          "question": "कथकली नृत्य में नायक की भूमिका को किस नाम से जाना जाता है?",
+          "options": ["काठी", "पच्चा", "रंगम", "कुमार"],
+          "answer": "पच्चा"
+        },
+        {
+          "id": "q9",
+          "question": "कथक नृत्य को किस अन्य नाम से जाना जाता है?",
+          "options": ["नाट्य नृत्य", "नटवरी नृत्य", "देवदासी नृत्य", "यक्षगान"],
+          "answer": "नटवरी नृत्य"
+        },
+        {
+          "id": "q10",
+          "question": "मोहिनीअट्टम नृत्य मुख्यतः किस शैली में प्रस्तुत किया जाता है?",
+          "options": ["तांडव", "लास्य", "रौद्र", "वीर"],
+          "answer": "लास्य"
+        },
+        {
+          "id": "q11",
+          "question": "कथक नृत्य में मुख्यतः किन वाद्य यंत्रों का उपयोग किया जाता है?",
+          "options": ["वीणा और मृदंग", "तबला और पखावज", "सरोद और सितार", "ड्रम और बाँसुरी"],
+          "answer": "तबला और पखावज"
+        },
+        {
+          "id": "q12",
+          "question": "श्रीमंत शंकरदेव द्वारा विकसित शास्त्रीय नृत्य कौन सा है?",
+          "options": ["कथकली", "कुचिपुड़ी", "सत्रिया", "भरतनाट्यम"],
+          "answer": "सत्रिया"
+        },
+        {
+          "id": "q13",
+          "question": "भरतनाट्यम का पुराना नाम क्या था?",
+          "options": ["तमिल नृत्य", "सदर", "अट्टम", "नाट्यम"],
+          "answer": "सदर"
+        },
+        {
+          "id": "q14",
+          "question": "कुचिपुड़ी नृत्य में विशेष प्रस्तुति के रूप में किस अनोखी परंपरा का पालन किया जाता है?",
+          "options": ["नेत्र अभिनय", "मृदंग संगत", "पीतल की तश्तरी पर नृत्य", "घुंघरू के बिना नृत्य"],
+          "answer": "पीतल की तश्तरी पर नृत्य"
+        },
+        {
+          "id": "q15",
+          "question": "शास्त्रीय नृत्य में हस्त मुद्राओं को कितने भागों में विभाजित किया गया है?",
+          "options": ["2", "3", "4", "5"],
+          "answer": "2"
+        }
+      ]
+    }
+  ]
+}
