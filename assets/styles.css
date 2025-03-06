@@ -1,0 +1,213 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #f4f4f9;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* Glowing Title */
+.glowing-title {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #6a11cb;
+    text-shadow: 0px 0px 20px rgba(106, 17, 203, 0.8);
+}
+
+/* Test Cards Container */
+.test-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Test Card Styling */
+.test-card {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 15px;
+    width: 300px;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    transition: transform 0.3s ease-in-out;
+    border: 3px solid transparent;
+    position: relative;
+}
+
+/* Glowing Outer Border Effect */
+.test-card::before {
+    content: "";
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    right: -3px;
+    bottom: -3px;
+    border-radius: 18px;
+    z-index: -1;
+    box-shadow: 0px 0px 15px rgba(106, 17, 203, 0.6);
+    animation: glowEffect 2s infinite alternate;
+}
+
+/* "Attempt" Button (Lowered) */
+.attempt-btn {
+    display: inline-block;
+    margin-top: 15px;  /* Lowered the button slightly */
+    padding: 12px 20px;
+    background: linear-gradient(45deg, #6a11cb, #ff00ff);
+    color: white;
+    font-weight: bold;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: 0.3s ease-in-out;
+}
+
+.attempt-btn:hover {
+    background: linear-gradient(45deg, #ff00ff, #6a11cb);
+    transform: scale(1.1);
+}
+
+/* Disable zooming on mobile */
+meta[name="viewport"] {
+    content: "width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no";
+}
+
+/* --- LEADERBOARD SECTION --- */
+.leaderboard {
+    margin-top: 30px;
+    padding: 20px;
+    width: 85%;
+    max-width: 500px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 25px rgba(200, 0, 255, 0.6);
+    text-align: center;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: fadeIn 1s ease-out;
+}
+
+/* Title Styling */
+.leaderboard h2 {
+    font-size: 24px;
+    color: #ff00ff;
+    text-shadow: 0 0 15px #ff00ff;
+    animation: glowPulse 2s infinite alternate;
+}
+
+/* Leaderboard List */
+.leaderboard-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 15px;
+}
+
+/* Leaderboard Items */
+.leaderboard-list li {
+    padding: 12px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    margin: 8px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(135deg, #ffffff, #fce4ec);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: slideIn 0.5s ease-out forwards;
+}
+
+/* Hover Effect */
+.leaderboard-list li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 25px rgba(255, 0, 255, 0.8);
+}
+
+/* Rank Styles */
+.rank-1 {
+    background: linear-gradient(135deg, gold, #ffecb3);
+    color: black;
+    text-shadow: 0 0 15px rgba(255, 223, 0, 0.9);
+    box-shadow: 0 0 30px rgba(255, 223, 0, 0.9);
+    position: relative;
+}
+
+.rank-1::before {
+    content: "🥇";
+    font-size: 60px;
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    transform: rotate(-10deg);
+    opacity: 0.3;
+}
+
+.rank-2 {
+    background: linear-gradient(135deg, silver, #ececec);
+    color: black;
+    text-shadow: 0 0 15px rgba(192, 192, 192, 0.9);
+    box-shadow: 0 0 25px rgba(192, 192, 192, 0.8);
+}
+
+.rank-2::before {
+    content: "🥈";
+    font-size: 50px;
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    opacity: 0.3;
+}
+
+.rank-3 {
+    background: linear-gradient(135deg, #cd7f32, #ffb366);
+    color: black;
+    text-shadow: 0 0 15px rgba(205, 127, 50, 0.9);
+    box-shadow: 0 0 20px rgba(205, 127, 50, 0.8);
+}
+
+.rank-3::before {
+    content: "🥉";
+    font-size: 40px;
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    opacity: 0.3;
+}
+
+/* Other Ranks */
+.rank-other {
+    background: linear-gradient(135deg, #6a11cb, #ff00ff);
+    color: white;
+}
+
+/* Animations */
+@keyframes slideIn {
+    0% { opacity: 0; transform: translateY(-20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes glowPulse {
+    0% { text-shadow: 0 0 10px #ff00ff; }
+    100% { text-shadow: 0 0 20px #ff00ff; }
+}
+
+/* --- RESPONSIVE FIXES --- */
+@media screen and (max-width: 600px) {
+    .leaderboard {
+        width: 90%;
+    }
+
+    .leaderboard-list li {
+        font-size: 16px;
+        padding: 10px;
+    }
+}
