@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
+    // ✅ GSAP Animations
     gsap.from(".test-card", {
         duration: 1.5,
         opacity: 0,
@@ -14,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
         ease: "elastic.out(1, 0.4)",
     });
 
-    // Load Test Series Data
+    // ✅ Load Test Series Data Securely
     fetch("data/tests.json")
         .then(response => response.json())
         .then(data => {
@@ -29,14 +30,14 @@ document.addEventListener("DOMContentLoaded", function () {
                         <div class="test-info">
                             ⏳ Timer: ${test.time_limit} mins | 📋 Questions: ${test.questions.length}
                         </div>
-                        <a href="test.html?id=${test.id}" class="attempt-btn">Attempt</a>
+                        <button class="attempt-btn" onclick="startTest('${test.id}')">Attempt</button>
                     </div>
                 `;
                 testContainer.innerHTML += testCard;
             });
         });
 
-    // Load Leaderboard Data
+    // ✅ Load Leaderboard Data
     fetch("data/leaderboard.json")
         .then(response => response.json())
         .then(data => {
@@ -44,11 +45,7 @@ document.addEventListener("DOMContentLoaded", function () {
             leaderboardList.innerHTML = ""; // Clear previous data
 
             data.top_scorers.forEach((player, index) => {
-                let rankClass = "";
-                if (index === 0) rankClass = "rank-1"; 
-                else if (index === 1) rankClass = "rank-2"; 
-                else if (index === 2) rankClass = "rank-3"; 
-                else rankClass = "rank-other";
+                let rankClass = index === 0 ? "rank-1" : index === 1 ? "rank-2" : index === 2 ? "rank-3" : "rank-other";
 
                 let listItem = `
                     <li class="leaderboard-item ${rankClass}">
@@ -60,3 +57,9 @@ document.addEventListener("DOMContentLoaded", function () {
             });
         });
 });
+
+// ✅ Secure Start Test Function (No URL Parameters)
+function startTest(testID) {
+    sessionStorage.setItem("selectedTestID", testID);
+    window.location.href = "test.html"; // ✅ No ID in URL
+}
