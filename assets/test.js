@@ -81,7 +81,7 @@ fetch("data/tests.json") // ✅ JSON path fixed
                 queryString += `&q${index + 1}=${res}`;
             });
 
-            window.location.href = `result.php?${queryString}`;
+            window.location.href = `result.html?${queryString}`;
         }
 
         function startTimer() {
