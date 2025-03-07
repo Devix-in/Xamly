@@ -1,6 +1,5 @@
 // Get URL Parameters
 const urlParams = new URLSearchParams(window.location.search);
-const score = parseInt(urlParams.get("score")) || 0;
 const total = parseInt(urlParams.get("total")) || 1;
 const responses = [];
 
@@ -9,18 +8,21 @@ urlParams.forEach((value, key) => {
     if (key.startsWith("q")) responses.push(value);
 });
 
-// ✅ Correct Score Calculation
+// ✅ Correct Score Calculation with 1/3rd Negative Marking
 const correct = responses.filter(res => res === "t").length;
 const incorrect = responses.filter(res => res === "f").length;
 const unattempted = responses.filter(res => res === "n").length;
 
 const attempted = correct + incorrect;
+const penalty = incorrect * (1 / 3); // ❌ Apply 1/3rd Negative Marking
+const finalScore = Math.max(0, correct - penalty); // ✅ Ensure Score is not Negative
+
 const accuracy = attempted > 0 ? (correct / attempted) * 100 : 0;
-const percentage = (score / total) * 100;
-const percentile = Math.round(50 + (score / total) * 50);
+const percentage = (finalScore / total) * 100;
+const percentile = Math.round(50 + (finalScore / total) * 50);
 
 // ✅ Update HTML Elements
-document.querySelector(".score-box").innerText = `Your Score: ${score} / ${total}`;
+document.querySelector(".score-box").innerText = `Your Score: ${finalScore.toFixed(2)} / ${total}`;
 document.querySelector(".stats").innerHTML = `
     <p><b>Percentage:</b> ${percentage.toFixed(2)}%</p>
     <p><b>Estimated Percentile:</b> ${percentile}%</p>
