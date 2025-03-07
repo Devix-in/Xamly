@@ -1,13 +1,11 @@
 // Fetch test data from JSON
-const urlParams = new URLSearchParams(window.location.search);
-const testID = urlParams.get('id');
-
 fetch("data/tests.json") // ✅ JSON path fixed
     .then(response => response.json())
     .then(data => {
-        let tests = data.test_series;
-        let selectedTest = tests.find(test => test.id === testID);
+        const urlParams = new URLSearchParams(window.location.search);
+        const testID = urlParams.get('id');
 
+        let selectedTest = data.test_series.find(test => test.id === testID);
         if (!selectedTest) {
             document.body.innerHTML = "<h1>Error: Test Not Found!</h1>";
             return;
@@ -31,23 +29,16 @@ fetch("data/tests.json") // ✅ JSON path fixed
             });
 
             document.getElementById("options-box").innerHTML = optionsHTML;
-            highlightSelectedOption();
             updateNavButtons();
-        }
-
-        function highlightSelectedOption() {
-            let options = document.querySelectorAll(".option");
-            options.forEach((option, i) => {
-                option.classList.remove("selected");
-                if (userAnswers[currentQuestionIndex] === i) {
-                    option.classList.add("selected");
-                }
-            });
         }
 
         window.selectOption = function (index) {
             userAnswers[currentQuestionIndex] = index;
-            highlightSelectedOption();
+            let options = document.querySelectorAll(".option");
+            options.forEach((option, i) => {
+                option.classList.remove("selected");
+                if (i === index) option.classList.add("selected");
+            });
         };
 
         function nextQuestion() {
@@ -72,34 +63,25 @@ fetch("data/tests.json") // ✅ JSON path fixed
         }
 
         function submitTest() {
-            let correct = 0;
-            let incorrect = 0;
+            let score = 0;
             let userResponse = [];
 
             questions.forEach((question, i) => {
                 let selectedIndex = userAnswers[i] ?? -1;
                 let isCorrect = selectedIndex !== -1 && question.options[selectedIndex] === question.answer;
 
-                if (isCorrect) {
-                    correct++;
-                    userResponse.push("t"); // ✅ Correct Answer
-                } else if (selectedIndex !== -1) {
-                    incorrect++;
-                    userResponse.push("f"); // ❌ Incorrect Answer
-                } else {
-                    userResponse.push("n"); // ❌ Not Attempted
-                }
+                userResponse.push(isCorrect ? "t" : selectedIndex === -1 ? "n" : "f");
+                if (isCorrect) score++;
             });
 
-            let penalty = incorrect * (1 / 3); // ❌ 1/3rd negative marking
-            let finalScore = Math.max(0, correct - penalty); // ✅ Score can't be negative
+            // ✅ Store data in sessionStorage (NO URL Parameters!)
+            sessionStorage.setItem("testID", testID);
+            sessionStorage.setItem("score", score);
+            sessionStorage.setItem("total", questions.length);
+            sessionStorage.setItem("responses", JSON.stringify(userResponse));
 
-            let queryString = `id=${testID}&score=${finalScore.toFixed(2)}&total=${questions.length}&time=${timer}`;
-            userResponse.forEach((res, index) => {
-                queryString += `&q${index + 1}=${res}`;
-            });
-
-            window.location.href = `result.html?${queryString}`;
+            // ✅ Redirect to result page without query parameters
+            window.location.href = "result.html";
         }
 
         function startTimer() {
