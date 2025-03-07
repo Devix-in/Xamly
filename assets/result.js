@@ -33,7 +33,7 @@ responses.forEach((res, index) => {
     questionAnalysis.innerHTML += `<div class="question-item ${className}">Q${index + 1}</div>`;
 });
 
-// ✅ Generate Chart
+// ✅ Generate Char
 const data = {
     labels: ["Correct", "Incorrect", "Unattempted"],
     datasets: [{
