@@ -31,16 +31,23 @@ fetch("data/tests.json") // ✅ JSON path fixed
             });
 
             document.getElementById("options-box").innerHTML = optionsHTML;
+            highlightSelectedOption();
             updateNavButtons();
+        }
+
+        function highlightSelectedOption() {
+            let options = document.querySelectorAll(".option");
+            options.forEach((option, i) => {
+                option.classList.remove("selected");
+                if (userAnswers[currentQuestionIndex] === i) {
+                    option.classList.add("selected");
+                }
+            });
         }
 
         window.selectOption = function (index) {
             userAnswers[currentQuestionIndex] = index;
-            let options = document.querySelectorAll(".option");
-            options.forEach((option, i) => {
-                option.classList.remove("selected");
-                if (i === index) option.classList.add("selected");
-            });
+            highlightSelectedOption();
         };
 
         function nextQuestion() {
@@ -65,18 +72,29 @@ fetch("data/tests.json") // ✅ JSON path fixed
         }
 
         function submitTest() {
-            let score = 0;
+            let correct = 0;
+            let incorrect = 0;
             let userResponse = [];
 
             questions.forEach((question, i) => {
                 let selectedIndex = userAnswers[i] ?? -1;
                 let isCorrect = selectedIndex !== -1 && question.options[selectedIndex] === question.answer;
 
-                userResponse.push(isCorrect ? "t" : selectedIndex === -1 ? "n" : "f");
-                if (isCorrect) score++;
+                if (isCorrect) {
+                    correct++;
+                    userResponse.push("t"); // ✅ Correct Answer
+                } else if (selectedIndex !== -1) {
+                    incorrect++;
+                    userResponse.push("f"); // ❌ Incorrect Answer
+                } else {
+                    userResponse.push("n"); // ❌ Not Attempted
+                }
             });
 
-            let queryString = `id=${testID}&score=${score}&total=${questions.length}&time=${timer}`;
+            let penalty = incorrect * (1 / 3); // ❌ 1/3rd negative marking
+            let finalScore = Math.max(0, correct - penalty); // ✅ Score can't be negative
+
+            let queryString = `id=${testID}&score=${finalScore.toFixed(2)}&total=${questions.length}&time=${timer}`;
             userResponse.forEach((res, index) => {
                 queryString += `&q${index + 1}=${res}`;
             });
