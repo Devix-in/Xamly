@@ -1,12 +1,8 @@
-// Get URL Parameters
-const urlParams = new URLSearchParams(window.location.search);
-const total = parseInt(urlParams.get("total")) || 1;
-const responses = [];
-
-// ✅ Extract Responses
-urlParams.forEach((value, key) => {
-    if (key.startsWith("q")) responses.push(value);
-});
+// ✅ Fetch data from sessionStorage instead of URL
+const testID = sessionStorage.getItem("testID");
+const score = parseFloat(sessionStorage.getItem("score")) || 0;
+const total = parseInt(sessionStorage.getItem("total")) || 1;
+const responses = JSON.parse(sessionStorage.getItem("responses")) || [];
 
 // ✅ Correct Score Calculation with 1/3rd Negative Marking
 const correct = responses.filter(res => res === "t").length;
@@ -63,3 +59,6 @@ const config = {
 };
 
 new Chart(document.getElementById("scoreChart"), config);
+
+// ✅ Clear sessionStorage after test completion (optional)
+setTimeout(() => sessionStorage.clear(), 5000);
