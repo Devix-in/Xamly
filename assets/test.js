@@ -1,5 +1,5 @@
 // Fetch test data from JSON
-fetch("data/tests.json") // ✅ JSON path fixed
+fetch("data/tests.json")
     .then(response => response.json())
     .then(data => {
         const urlParams = new URLSearchParams(window.location.search);
@@ -74,7 +74,7 @@ fetch("data/tests.json") // ✅ JSON path fixed
                 if (isCorrect) score++;
             });
 
-            // ✅ Store data in sessionStorage (NO URL Parameters!)
+            // ✅ Store data in sessionStorage
             sessionStorage.setItem("testID", testID);
             sessionStorage.setItem("score", score);
             sessionStorage.setItem("total", questions.length);
