@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result | Xamly</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="assets/result.css">
+</head>
+<body>
+
+    <div class="result-container">
+        <h2>Test Completed! 🎉</h2>
+        <div class="score-box">Your Score: <span id="score"></span></div>
+
+        <div class="stats">
+            <p><b>Percentage:</b> <span id="percentage"></span>%</p>
+            <p><b>Estimated Percentile:</b> <span id="percentile"></span>%</p>
+            <p><b>Accuracy:</b> <span id="accuracy"></span>%</p>
+        </div>
+
+        <div class="chart-container">
+            <canvas id="scoreChart"></canvas>
+        </div>
+
+        <h3>📊 Question Analysis</h3>
+        <div class="question-analysis" id="question-analysis"></div>
+
+        <button class="home-btn" onclick="window.location.href='index.html'">🏠 Home</button>
+        <button class="solution-btn" onclick="window.location.href='solution.html'">📖 View Solutions</button>
+    </div>
+
+    <script src="assets/result.js"></script>
+
+</body>
+</html>
